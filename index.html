@@ -95,7 +95,7 @@
     <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
     
-    <script src="data/route.js"></script> <!--this line loads the route.js file-->
+    <script src="Data/route.js"></script> <!--this line loads the route.js file-->
    
    <script> 
    
@@ -125,7 +125,7 @@ var CartoDB_VoyagerLabelsUnder = L.tileLayer('https://{s}.basemaps.cartocdn.com/
 
         var myRoute = L.geoJson(data, {
          filter : function(feature) {
-            if(feature.geometry.type = "LineString") {
+            if(feature.geometry.type == "LineString") {
              return feature;
             }
         },
@@ -141,7 +141,7 @@ var CartoDB_VoyagerLabelsUnder = L.tileLayer('https://{s}.basemaps.cartocdn.com/
 
             var myStops = L.geoJson(data, {
                 filter : function(feature) {
-                    if(feature.geometry.type = "Point") {
+                    if(feature.geometry.type == "Point") {
                         return feature;
                  }
                 },
